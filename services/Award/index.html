@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>OP1.5 - Gradbook units UI PoC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<script class="tmpl-unit" type="text/html">
+{{#each units}}
+    <li class="unit" >
+      <div class="unit-header">
+    
+      <div class="unit-ref">
+        <div class="unit-ref-number">{{prefix}}</div>
+        <div class="unit-ref-title">{{title}}</div>
+      </div>
+      <div class="unit-data">
+        
+        <div class="unit-data-complete">
+          <div class="unit-data-complete-div"> 
+            <div class="unit-data-complete-count {{grey activities}}">
+              <span class="unit-data-complete-count-done">{{activities.done}}</span><span class="unit-data-complete-count-total">/{{activities.available}}</span> 
+            </div>
+            <div class="unit-data-complete-label"><span class="hide-wM">Activities </span>done</div>
+          </div>
+          <div class="unit-data-complete-circle">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="17" fill="none" stroke-width="6" stroke="#E4E4E4" />
+            <circle cx="20" cy="20" r="17" fill="none" stroke-width="6" stroke="#F6A623" stroke-dasharray="106.81" stroke-dashoffset="{{circle activities}}"/>
+            
+            </svg>
+          </div>
+        </div>
+        <div class="unit-data-points">
+          <div class="unit-data-points-number award-{{award}}  {{grey activities}}">
+            <div class="unit-data-points-number-label">Points</div>
+            <div class="unit-data-points-number-count">
+              <span class="unit-data-points-number-count-done">{{pointsGot}}</span><span class="unit-data-points-number-count-total">/{{pointsAvailable}}</span>               
+            </div>
+          </div>
+          {{#if award}}
+          <div class="unit-data-points-award">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29281/award-{{award}}.png"/>
+  				</div>
+          {{/if}}
+        </div>
+        
+      </div>
+      </div>
+    </li>
+{{/each}}
+
+</script>
+<div class="dump"></div>
+<div class="container">
+  <div class="toggles"></div>
+  <ul class="unit-list">
+  </ul>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
