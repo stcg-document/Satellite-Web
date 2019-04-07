@@ -1,120 +1,109 @@
-const unitBumf = `<div>
-  <div class="lesson">
-    <div class="lesson-title">Title here</div>
-    <ul class="lesson-activities">
-      <li class="activity">
-        <div class="activity-done"></div>
-        <div class="activity-title">Activity title goes here <span class="skill-tag">Skill tag</span></div>
-        <div class="activity-data"></div>
-      </li>
-      <li class="activity">
-        <div class="activity-done"></div>
-        <div class="activity-title">Activity title goes here <span class="skill-tag">Skill tag</span></div>
-        <div class="activity-data"></div>
-      </li>
-    </ul>
-  </div>
-  <div class="lesson">
-    <div class="lesson-title">Title here</div>
-    <ul class="lesson-activities">
-      <li class="activity">
-        <div class="activity-done"></div>
-        <div class="activity-title">Activity title goes here <span class="skill-tag">Skill tag</span></div>
-        <div class="activity-data"></div>
-      </li>
-    </ul>
-  </div>
-</div>`
+const unitBumf = ``
+
+const jsonSrc = "https://script.googleusercontent.com/macros/echo?user_content_key=fVEnOdlIs1Qv8BYoy7mDbbVDyRotU6VgI1anfVENioOon4cdBar80-5kQAV0-8uatIawvJ6bapCknNCdQOwynz92JSyGfaE7m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGHgPtx9O9gEonr6HCqZD3BAtyYpuU2jirG75FOHaN9IYwW8qDG8bGYY_uIziZ__NekCczCD7G8j&lib=MdcCLrFaX4dKwUEcTUI7maOxJfuXJbOWK";
+
 
 const menuData = {
   units: [
     {
-      prefix: "1",
+      prefix: "メイン",
+      title: "T.利央 2040のストーリーをクリアする",
+      activities: {
+      },
+      done: 0,
+      available: 4,
+      pointsGot: 0,
+      pointsAvailable: 4,
+      award: "trophy"
+    },    
+    {
+      prefix: "メイン",
       title: "どこかにいる四天王を撃破する",
       activities: {
-        done: 4,
-        available: 4
       },
-      pointsGot: 100,
-      pointsAvailable: 100,
-      award: "trophy"
-    },
-   {
-      prefix: "2",
-      title: "I think it's exciting!",
-      activities: {
-        done: 12,
-        available: 13
-      },
-      pointsGot: 71,
-      pointsAvailable: 84,
+      done: 0,
+      available: 4,
+      pointsGot: 0,
+      pointsAvailable: 4,
       award: "gold"
     },
-   {
-      prefix: "3",
-      title: "Do it before you're 30!",
+    {
+      prefix: "メイン",
+      title: "怪盗集団を捕獲する",
       activities: {
-        done: 12,
-        available: 15
       },
-      pointsGot: 64,
-      pointsAvailable: 81,
+      done: 0,
+      available: 4,
+      pointsGot: 0,
+      pointsAvailable: 4,
+      award: "gold"
+    }, 
+    {
+      prefix: "メイン",
+      title: "三騎士のカードを手に入れる",
+      activities: {
+      },
+      done: 0,
+      available: 3,
+      pointsGot: 0,
+      pointsAvailable: 3,
+      award: "silver"
+    }, 
+    {
+      prefix: "メイン",
+      title: "12体の龍のカードを集める",
+      activities: {
+      },
+      done: 0,
+      available: 5,
+      pointsGot: 0,
+      pointsAvailable: 5,
+      award: "silver"
+    }, 
+    {
+      prefix: "サブ",
+      title: "1から107のナンバーズを全て揃える",
+      activities: {
+      },
+      done: 8,
+      available: 107,
+      pointsGot: 8,
+      pointsAvailable: 107,
+      award: "silver"
+    } ,
+    {
+      prefix: "サブ",
+      title: "決闘を100回する",
+      activities: {
+      },
+      done: 16,
+      available: 100,
+      pointsGot: 16,
+      pointsAvailable: 107,
       award: "silver"
     },
-   {
-      prefix: "R1",
-      title: "Review: Units 1–3",
+    {
+      prefix: "サブ",
+      title: "エーテル適性を一定以上上げる",
       activities: {
-        done: 6,
-        available: 6
       },
-      pointsGot: 38,
-      pointsAvailable: 41,
-      award: "gold"
-    },    
-   {
-      prefix: "4",
-      title: "The best place in the world!",
+      done: 240,
+      available: 1500,
+      pointsGot: 240,
+      pointsAvailable: 1500,
+      award: "silver"
+    } ,
+    {
+      prefix: "特異点",
+      title: "特異点を見つける",
       activities: {
-        done: 12,
-        available: 19
       },
-      pointsGot: 55,
-      pointsAvailable: 107,
-      award: "bronze"
-    },
-   {
-      prefix: "5",
-      title: "I think it’s exciting! A whole unit on Rare Stamps: a list of postage stamps that are especially notable in some way, often due to antiquity or a postage stamp error.",
-      activities: {
-        done: 12,
-        available: 19
-      },
-      pointsGot: 55,
-      pointsAvailable: 107,
-      award: "bronze"
-    },
-   {
-      prefix: "6",
-      title: "The best place in the world!",
-      activities: {
-        done: 4,
-        available: 18
-      },
-      pointsGot: 14,
-      pointsAvailable: 87
-    },
-   {
-      prefix: "R2",
-      title: "Review: Units 4–6",
-      activities: {
-        done: 0,
-        available: 6
-      },
+      done: 0,
+      available: 10,
       pointsGot: 0,
-      pointsAvailable: 41,
-      notStarted: true
-    }    
+      pointsAvailable: 10,
+      award: "silver"
+    }   
   ]
 }
 Handlebars.registerHelper('circle', function(activities) {
@@ -163,8 +152,4 @@ function openUnit(e) {
   }
 
 
-}
-
-for (var unit of units) {
-  unit.addEventListener('click', openUnit);
 }

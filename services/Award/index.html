@@ -10,6 +10,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800'>
 
       <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 
   
 </head>
@@ -23,17 +24,17 @@
       <div class="unit-header">
     
       <div class="unit-ref">
-        <div class="unit-ref-number">{{prefix}}</div>
         <div class="unit-ref-title">{{title}}</div>
+        <div class="unit-ref-number">{{prefix}}</div>
       </div>
       <div class="unit-data">
         
         <div class="unit-data-complete">
           <div class="unit-data-complete-div"> 
             <div class="unit-data-complete-count {{grey activities}}">
-              <span class="unit-data-complete-count-done">{{activities.done}}</span><span class="unit-data-complete-count-total">/{{activities.available}}</span> 
+              <span class="unit-data-complete-count-done"><font color="#FFC560" size="5px">{{done}}</font></span><span class="unit-data-complete-count-total"><font color="#FFC560">/{{available}}</font></span> 
             </div>
-            <div class="unit-data-complete-label"><span class="hide-wM">Activities </span>done</div>
+            <div class="unit-data-complete-label"><span class="hide-wM"> </span><font size="2px">達成率</font></div>
           </div>
           <div class="unit-data-complete-circle">
           <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +46,7 @@
         </div>
         <div class="unit-data-points">
           <div class="unit-data-points-number award-{{award}}  {{grey activities}}">
-            <div class="unit-data-points-number-label">Points</div>
+            <div class="unit-data-points-number-label">達成度</div>
             <div class="unit-data-points-number-count">
               <span class="unit-data-points-number-count-done">{{pointsGot}}</span><span class="unit-data-points-number-count-total">/{{pointsAvailable}}</span>               
             </div>

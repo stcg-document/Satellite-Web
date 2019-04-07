@@ -67,6 +67,22 @@ figure {
   color: #fff;
   background: #FFC300; }
 
+table{
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th{
+  border-bottom: solid 2px #fb5144;
+  padding: 10px 0;
+}
+
+table td{
+  border-bottom: solid 2px #ddd;
+  text-align: center;
+  padding: 10px 0;
+}
+
 #colorlib-page {
   width: 100%;
   overflow: hidden;
@@ -384,6 +400,7 @@ body.offcanvas {
   padding-top: 4em;
   padding-bottom: 9em;
   clear: both;
+  position: relative;
   width: 100%;
   display: block; }
   @media screen and (max-width: 768px) {
